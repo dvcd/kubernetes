@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: testsshdemostrate
+  labels:
+    purpose: demostrate
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sshdemostrate
+    spec:
+      containers:
+      - name: ssh-demo-container
+        image: dockerhub.ygomi.com/testbash:usingssh
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 22
+ 
