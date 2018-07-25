@@ -36,5 +36,5 @@ RUN 	sed -i "s/without-password/yes/g" /etc/ssh/sshd_config &&\
 
 EXPOSE 22
 
-ENTRYPOINT ["sh","/startup.sh"]
+ENTRYPOINT /startup.sh && /etc/init.d/ssh start -D
 
