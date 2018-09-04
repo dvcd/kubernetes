@@ -10,6 +10,7 @@ RUN
 	ssh
 
 
+
 RUN 	sed -i "s/without-password/yes/g" /etc/ssh/sshd_config &&\
 	#ygomi dns
 	#echo 10.69.6.110	pub-repo.roaddb.ygomi.com |tee -a /etc/hosts &&\
