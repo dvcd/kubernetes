@@ -21,8 +21,8 @@ RUN 	sed -i "s/without-password/yes/g" /etc/ssh/sshd_config &&\
  	echo roaddb:test1234 | chpasswd &&\
  	mkdir /home/roaddb/.ssh &&\
  	touch /home/roaddb/.ssh/authorized_keys &&\
-        wget -O /tmp/ssl.tar.gz2 http://repo.roaddb.ygomi.com/download/docker/ssl.tar.gz2 &&\
-        sudo tar jvxf /tmp/ssl.tar.gz2 -C /home/roaddb/ &&\
+        #wget -O /tmp/ssl.tar.gz2 http://repo.roaddb.ygomi.com/download/docker/ssl.tar.gz2 &&\
+        #sudo tar jvxf /tmp/ssl.tar.gz2 -C /home/roaddb/ &&\
         rm -rf /tmp/* &&\
  	chmod 0755 /startup.sh
 
