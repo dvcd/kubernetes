@@ -3,8 +3,7 @@ USER root
 
 COPY 	./startup.sh /
 
-RUN	
-        apt-get update && apt-get install -y --no-install-recommends --force-yes \
+RUN     apt-get update && apt-get install -y --no-install-recommends --force-yes \
 	software-properties-common \
 	wget=1.15-1ubuntu1 \
 	ssh
